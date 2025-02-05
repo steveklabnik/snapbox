@@ -764,7 +764,8 @@ pub struct Filesystem {
 
 impl Filesystem {
     pub(crate) fn sandbox(&self) -> bool {
-        self.sandbox.unwrap_or_default()
+        // self.sandbox.unwrap_or_default()
+        true
     }
 
     pub(crate) fn rel_cwd(&self) -> Result<&std::path::Path, crate::Error> {
